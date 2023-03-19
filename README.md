@@ -15,7 +15,7 @@ PS：做完觉得自己做了一个氪金游戏支付界面 😂
 采用 React 和 Electron 设计一个静态页面，可以完成一些基本的支付互动操作，这里考虑将数据分离到 state 当中，React 和 Electron 这两者的结合比较有趣和创新。
 
 为了使用户脱离审美疲劳，我设计了一个未来采用星际物质进行旅行的网页，原始的携程支付界面如下图所示：
-<img src="1.png"/>
+<img src="./1.png"/>
 大致分为订单结算栏、支付推荐和支付方式选择，下部有公司标识。
 
 - 订单结算栏：包括订单金额【State】、剩余时间结算【定时器】、费用具体信息，包括购买的类型、优惠活动、购票人姓名和身份信息、联系方式等
@@ -107,7 +107,7 @@ app.on("ready", () => {
 ```
 
 先运行`npm run start`后再运行`npm run electron-dev`后的效果如图所示：
-<img src="2.png"/>
+<img src="./2.png"/>
 
 现在我们就将 REACT 应用挂载到了 Electron 的窗口上。
 
@@ -116,7 +116,7 @@ app.on("ready", () => {
 这里采用了 AntDesign 样式库设计组件外观等功能，首先根据需求分析的结果，我们先写一个静态页面，没有任何功能，可以先捏造一些数据在 state 当中，首先一个组件一个组件地实现内容，样式单位采用 vw 实现 DOM 大小自适应效果。
 
 采用 position 定位的方式将一张图作为背景，使其充满整个屏幕：
-<img src="3.png"/>
+<img src="./3.png"/>
 
 #### 订单结算栏
 
@@ -291,16 +291,16 @@ export default function Details(props) {
 }
 ```
 
-展开效果：<img src="4.png"/>
+展开效果：<img src="./4.png"/>
 
-关闭效果：<img src="5.png"/>
+关闭效果：<img src="./5.png"/>
 
 还有一个定时器用于显示订单超时取消的状态。
 
 #### 添加新的宇宙飞船（商务促销）
 
 这个部分一开始对用户可见的部分可能只有添加新宇宙飞船这个选项，但是通过点击复选框可以显示后面的推荐内容和下面的添加新宇宙飞船按钮，通过 state 控制是否显示这些组件。注意其中如果想要完成点击复选框整个组件加上一个边框的效果，需要用到 useRef 钩子，操作父元素的 DOM：
-<img src="6.png"/>
+<img src="./6.png"/>
 
 ```js
 import "./App.css";
@@ -462,6 +462,6 @@ export default function Choose() {
 
 ### 最终效果展示
 
-<img src="7.png"/>
-<img src="8.png"/>
-<img src="9.png"/>
+<img src="./7.png"/>
+<img src="./8.png"/>
+<img src="./9.png"/>
